@@ -6,7 +6,7 @@ func StrLen(str string) int {
 
 	i := 0
 
-	for k, _ := range strchanged {
+	for k := range strchanged {
 		i = i + 1 + k - k
 
 	}
