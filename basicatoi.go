@@ -2,21 +2,16 @@ package piscine
 
 func BasicAtoi(s string) int {
 
-	str := []rune(s)
+	sum := 0
+	for _, i := range s {
+		ost := 0
+		for k := '1'; k <= i; k++ {
+			ost = ost + 1
+		}
 
-	leng := 0
-	for k := range str {
-		leng = leng + 1 + k - k
+		sum = sum*10 + ost
+
 	}
-
-	t := 1
-	i := 0
-
-	for p := leng - 1; p >= 0; p-- {
-
-		i += int(str[p]-'0') * t
-		t = t * 10
-	}
-	return i
+	return sum
 
 }
