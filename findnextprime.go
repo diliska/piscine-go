@@ -4,16 +4,16 @@ func IsPrime1(nb int) bool {
 
 	if (nb == 0) || (nb == 1) {
 		return false
+	} else if nb == 2 || nb == 3 {
+		return true
 	} else {
-		flag := false
-		kol := 1
-		for i := 1; i <= nb/2; i++ {
+		flag := true
+
+		for i := 2; i <= nb/2; i++ {
 			if nb%i == 0 {
-				kol = kol + 1
+				flag = false
+				break
 			}
-		}
-		if kol == 2 {
-			flag = true
 		}
 		return flag
 	}
@@ -23,7 +23,7 @@ func FindNextPrime(nb int) int {
 	res := 0
 	if nb <= 1 {
 		return 2
-	} else if nb <= 100000823 {
+	} else if nb <= 1000000088 {
 
 		for i := nb; i <= 2*nb; i++ {
 
