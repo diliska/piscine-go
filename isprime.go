@@ -12,7 +12,7 @@ func IsPrime(nb int) bool {
 				kol = kol + 1
 			}
 		}
-		if kol > 2 {
+		if kol == 2 {
 			flag = true
 		}
 		return flag
