@@ -23,7 +23,7 @@ func FindNextPrime(nb int) int {
 	res := 0
 	if nb <= 1 {
 		return 2
-	} else if nb <= 1000000823 {
+	} else if nb <= 100000823 {
 
 		for i := nb; i <= 2*nb; i++ {
 
