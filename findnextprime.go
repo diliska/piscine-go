@@ -7,7 +7,7 @@ func IsPrime1(nb int) bool {
 	} else {
 		flag := false
 		kol := 1
-		for i := 1; i <= nb-1; i++ {
+		for i := 1; i <= nb/2; i++ {
 			if nb%i == 0 {
 				kol = kol + 1
 			}
@@ -23,7 +23,7 @@ func FindNextPrime(nb int) int {
 	res := 0
 	if nb <= 1 {
 		return 2
-	} else if nb <= 1073741823 {
+	} else if nb <= 1000000823 {
 
 		for i := nb; i <= 2*nb; i++ {
 
