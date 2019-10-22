@@ -2,7 +2,7 @@ package piscine
 
 func isletter(a rune) bool {
 
-	if ('a' <= a && a <= 'z') || ('A' <= a && a <= 'Z') || ('1' <= a && a <= '9') {
+	if ('a' <= a && a <= 'z') || ('A' <= a && a <= 'Z') || ('0' <= a && a <= '9') {
 		return true
 	} else {
 		return false
