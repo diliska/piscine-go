@@ -18,6 +18,15 @@ func caplet(a rune) rune {
 	}
 }
 
+func lowlet(a rune) rune {
+
+	if 'A' <= a && a <= 'Z' {
+		return rune(a + 32)
+	} else {
+		return a
+	}
+}
+
 func Capitalize(s string) string {
 
 	prevrune := '!'
@@ -26,9 +35,11 @@ func Capitalize(s string) string {
 
 	for index, k := range s {
 		if isletter(k) && !(isletter(prevrune)) {
-
 			res[index] = rune(caplet(k))
+		} else if isletter(k) && isletter(prevrune) {
+			res[index] = rune(lowlet(k))
 		}
+
 		prevrune = k
 	}
 	str := string(res)
