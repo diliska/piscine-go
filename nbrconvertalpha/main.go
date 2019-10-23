@@ -40,7 +40,7 @@ func main() {
 	}
 
 	if count >= 2 && arguments[1] == "--upper" {
-		pos = 2
+		pos = 1
 		flagupper = true
 	}
 
