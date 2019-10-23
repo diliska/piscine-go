@@ -5,12 +5,12 @@ import "github.com/01-edu/z01"
 
 func main() {
 
-	arguments:=os.Args
+	arguments := os.Args
 
-	str:=arguments [0]
+	str := arguments[0]
 
-	for _, k:=range str {
+	for _, k := range str {
 		z01.PrintRune(k)
 	}
-z01.PrintRune(10)
+	z01.PrintRune(10)
 }
