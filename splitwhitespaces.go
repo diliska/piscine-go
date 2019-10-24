@@ -12,18 +12,19 @@ func issep(n rune) bool {
 func SplitWhiteSpaces(str string) []string {
 	word := ""
 	count := 0
-	str = str + " "
+	str = str + string(' ')
 
 	for _, k := range str {
 		if !issep(k) {
 			word = word + string(k)
 		} else {
-			//if word != "" {
+			if word != "" {
 			count++
-			//}
+			word=""
+		    }
 		}
 	}
-
+	
 	res := make([]string, count)
 
 	word = ""
