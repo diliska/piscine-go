@@ -18,9 +18,9 @@ func SplitWhiteSpaces(str string) []string {
 		if !issep(k) {
 			word = word + string(k)
 		} else {
-			if word != "" {
-				count++
-			}
+			//if word != "" {
+			count++
+			//}
 		}
 	}
 
