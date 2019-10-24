@@ -1,5 +1,6 @@
 package piscine
 
+
 func issep(n rune) bool {
 	res := false
 
@@ -13,7 +14,7 @@ func SplitWhiteSpaces(str string) []string {
 	word := ""
 	count := 0
 	str = str + " "
-	var res []string
+	
 
 	for _, k := range str {
 		if !issep(k) {
@@ -21,7 +22,22 @@ func SplitWhiteSpaces(str string) []string {
 		} else {
 			if word != "" {
 				count++
-				res = append(res, word)
+			}
+		}
+	}
+
+	res:=make([]string, count)
+
+	word=""
+	i:=0
+
+	for _, k := range str {
+		if !issep(k) {
+			word = word + string(k)
+		} else {
+			if word != "" {
+				i++
+				res[i-1]=word
 				word = ""
 			}
 		}
