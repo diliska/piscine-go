@@ -19,12 +19,12 @@ func SplitWhiteSpaces(str string) []string {
 			word = word + string(k)
 		} else {
 			if word != "" {
-			count++
-			word=""
-		    }
+				count++
+				word = ""
+			}
 		}
 	}
-	
+
 	res := make([]string, count)
 
 	word = ""
